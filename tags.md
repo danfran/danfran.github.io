@@ -12,4 +12,4 @@ permalink: /tags/
 {% endfor %}
 </ul>
 
-{% include tag_cloud.html %}
+{% include tagcloud.html %}
