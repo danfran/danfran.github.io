@@ -17,26 +17,34 @@ categories: shell sh bash awk grep tr sed cut
 ### Pipe values to Grep
 Cut first 9 chars from a file, and the single remaining line become the term to grep; "-f" is for file, and the file "-" is for stdin.
 
-```$ cut -c9- somefile.txt | grep -f - anotherfile.txt```
+```{sh}
+$ cut -c9- somefile.txt | grep -f - anotherfile.txt
+```
 
-### To count the number of occurrencies for a character (e.g.: ") line by line:
-```$ tr -d -c '"\n' < filename.csv | awk '{ print length; }'```
+### How to count the number of occurrencies for a character (e.g.: ") line by line
+```{sh}
+$ tr -d -c '"\n' < filename.csv | awk '{ print length; }'
+```
 
 more overkill
 
-```$ sed 's/[^"]//g' filename.csv | awk '{ print length }' | uniq -c | sort```
+```{sh}
+$ sed 's/[^"]//g' filename.csv | awk '{ print length }' | uniq -c | sort
+```
 
-### To check if the csv has the right number of commas and expected column characters:
-```$ awk 'BEGIN{FS=OFS=","} NF==30 && $1~/^[0-9]$/ && $2~/^[a-z]{2,4}$/ && $3~/^[YN]$/' filename.csv```
+### How to check if the CSV has the right number of commas and expected column characters
+```{sh}
+$ awk 'BEGIN{FS=OFS=","} NF==30 && $1~/^[0-9]$/ && $2~/^[a-z]{2,4}$/ && $3~/^[YN]$/' filename.csv
+```
 
 or
 
-```
+```{sh}
 $ awk 'BEGIN{FS=OFS=","} NF!=30 {print "not enough fields"; exit} !($1~/^[0-9]$/) {print "1st field invalid"; exit}' filename.csv
 ```
 
 ### How to find bad lines (with an odd number of double-quotes) and copy them on a separate file
-```
+```{sh}
 $ tr -d -c '"\n' < filename.csv | awk '{ if (length == 5 || length == 3) print NR }' > lines.txt
 $ while read line; do head -n $line filename.csv | tail -1 ; done <lines.txt > bad_lines.txt
 ```
@@ -93,24 +101,24 @@ awk -F\, '$8 == "\"Some value\"" {
 
 ### Find the lines included in one file and not include in another one
 ```{sh}
-~$ cat a.csv
+$ cat a.csv
 aaa
 bbb
 ccc
-~$ cat b.csv
+$ cat b.csv
 bbb
 aaa
 ddd
 eee
-~$ grep -Fvf a.csv b.csv
+$ grep -Fvf a.csv b.csv
 ddd
 eee
-~$ grep -Fvf b.csv a.csv
+$ grep -Fvf b.csv a.csv
 ccc
 ```
 
 ### Extract attribute values from XML
 ```{sh}
-~$ echo '<mydata att1="foo" att2="bar" att3="ter" />' | grep -oPm1 "(?<=att2=\")[^\"]+"
+$ echo '<mydata att1="foo" att2="bar" att3="ter" />' | grep -oPm1 "(?<=att2=\")[^\"]+"
 bar
 ```
