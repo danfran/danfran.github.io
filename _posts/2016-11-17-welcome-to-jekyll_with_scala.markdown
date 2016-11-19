@@ -2,7 +2,6 @@
 layout: post
 title: "Shell Tips"
 date:   2016-11-19
-tags: scala
 categories: shell sh bash awk grep tr sed cut
 ---
 ### Good readings for AWK
