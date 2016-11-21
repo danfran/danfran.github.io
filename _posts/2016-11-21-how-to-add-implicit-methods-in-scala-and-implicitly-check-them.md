@@ -1,5 +1,9 @@
-### How to add implicit methods in Scala and implicitly check for them
-
+---
+layout: post
+title: "How to add implicit methods in Scala and implicitly check for them"
+date:   2016-11-19
+categories: shell sh bash awk grep tr sed cut
+---
 Let's start with this simple example from REPL:
 
 ```{scala}
