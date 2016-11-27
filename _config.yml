@@ -9,3 +9,4 @@ github_username: danfran
 theme: minima
 # Build settings
 markdown: kramdown
+google_analytics: UA-88031393-1
