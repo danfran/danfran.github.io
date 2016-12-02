@@ -1,3 +1,9 @@
+---
+layout: post
+title: "Find the slope in a linear model using R"
+date:   2016-12-02
+categories: r linear-model regression
+---
 Let's say we have an outcome `y` with and `x` as regressor passing through the origin with values:
 
 ```{r}
