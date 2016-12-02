@@ -19,13 +19,13 @@ xy <- as.data.frame(cbind(y,x))
 
 then using the `lm` (linear model) function:
 
-```
+```{r}
 lm(formula = y ~ x, data = as.data.frame(xy))
 ```
 
 that returns:
 
-```
+```{r}
 Coefficients:
 (Intercept)            x  
       1.567       -1.713
