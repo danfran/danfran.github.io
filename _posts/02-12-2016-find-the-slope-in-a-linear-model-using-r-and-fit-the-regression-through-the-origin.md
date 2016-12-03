@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Find the slope in a linear model using R"
+title: "Find the slope in a linear model using R and fit the regression through the origin"
 date:   2016-12-02
 categories: r linear-model regression
 ---
