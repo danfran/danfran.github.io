@@ -10,3 +10,6 @@ theme: minima
 # Build settings
 markdown: kramdown
 google_analytics: UA-88031393-1
+exclude:
+    - Gemfile
+    - Gemfile.lock
