@@ -31,4 +31,17 @@ Coefficients:
       1.567       -1.713
 ```
 
-that returns the slope: `-1.713`
+that returns the slope: `-1.713`.
+To fit it through the origin:
+
+```{r}
+> lm(y ~ x + 0)
+
+Call:
+lm(formula = y ~ x + 0)
+
+Coefficients:
+     x  
+0.8263  
+
+```
