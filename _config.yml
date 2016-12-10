@@ -1,15 +1,60 @@
-# Site settings
+### Site info:
 title: Super Quick Notes
+tagline:  Minimal jotted down notes. 
+author: Daniele Francesconi
 email: dfrancesconi12@gmail.com
-description: > # this means to ignore newlines until "baseurl:"
-  Minimal jotted down notes.
+description: "Minimal jotted down notes." # You can edit this line in _config.yml. It will appear in your document head meta and in your feed.xml site description
+keywords: "haskell, r, scala"
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://danfran.github.io" # the base hostname & protocol for your site
-github_username: danfran
-theme: minima
-# Build settings
+locale: en_US
+
+### Personal info and site tools info:
+github_username:  danfran
+twitter_username: ""
+aboutme_photo: ""
+favicon:     "/images/favicon.ico"
+google_analytics_key: UA-88031393-1 # put YOUR key here to enable tracking! (blank to disable)
+
+
+### Site setting:
+ShowContactInfo: "True" # Personal Info (twitter,github,email) can be seen on aboutme-sidebar, those info only shown where ShowContactInfo == True
+default_column: "two" # blog style: two columns, if default_column != "two", you will see a one column blog.
+default_locale: "en" # blog sidebar language set, only include: English (en), Chinese (cn), Japanese (jp), Polish (pl), Korean (kr) and Russian (ru) 
+
+locales:
+    en:
+      Aboutme: "About Me"
+      Archives: "Archives"
+      Blogroll: "Blogroll"
+      Categories: "Categories"
+      Copyright_Notice: "Copyright Notice"
+      Recent_Posts: "Recent Posts"
+      Tags: "Tags"
+      Previous: "Older"
+      Next: "Newer"
+      PostedInCategories: "Posted in"
+      Taggedwith: "and tagged"
+      PostDate: "on "
+      Google_search: "Site Search"
+      Home: "Home"
+      About: "About"
+      Guestbook: "Guestbook"
+      Subscribe: "Subscribe"
+
+### your Blogroll info, only name can shown on the page.
+
+Blogroll:
+      - name: Daniele Francesconi
+        href: http://danfran.github,io
+        title: Super Quick Notes
+
+### Build settings
 markdown: kramdown
-google_analytics: UA-88031393-1
-exclude:
-    - Gemfile
-    - Gemfile.lock
+#highlighter: pygments
+kramdown:
+        input: GFM
+        syntax_highlighter: rouge
+gems: [jekyll-paginate]
+paginate: 5
+excerpt_separator: <!-- more -->
