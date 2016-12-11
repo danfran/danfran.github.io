@@ -7,7 +7,7 @@ description: "Minimal jotted down notes." # You can edit this line in _config.ym
 keywords: "haskell, r, scala"
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://danfran.github.io" # the base hostname & protocol for your site
-locale: en_US
+locale: en_GB
 
 ### Personal info and site tools info:
 github_username:  danfran
@@ -46,7 +46,7 @@ locales:
 
 Blogroll:
       - name: Daniele Francesconi
-        href: http://danfran.github,io
+        href: http://danfran.github.io
         title: Super Quick Notes
 
 ### Build settings
