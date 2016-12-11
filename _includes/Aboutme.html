@@ -1,8 +1,10 @@
 <div class="sidebar-module about">
   <h4>{{ site.locales[site.default_locale].Aboutme }}</h4>
+  {% if site.aboutme_photo != empty %}
   <img title="{{site.author}}" src="{{site.aboutme_photo}}" alt="{{site.author}}"/>
   <span>{{site.aboutme}}</span>
   <br />
+  {% endif %}
 
   {% if site.ShowContactInfo == "True" %}
 
