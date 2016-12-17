@@ -1,12 +1,12 @@
 ---
 title: How to find out if an interaction should be included or not in our model
-tags: anova, regression-model
+tags: anova regression-model
 archives: r
 ---
 
 Based on this quiz question from the Coursera course for Data Science:
 
-**Consider the mtcars data set. Fit a model with mpg as the outcome that considers number of cylinders as a factor variable and weight as confounder. Now fit a second model with mpg as the outcome model that considers the interaction between number of cylinders (as a factor variable) and weight. Give the P-value for the likelihood ratio test comparing the two models and suggest a model using 0.05 as a type I error rate significance benchmark.**
+***Consider the mtcars data set. Fit a model with mpg as the outcome that considers number of cylinders as a factor variable and weight as confounder. Now fit a second model with mpg as the outcome model that considers the interaction between number of cylinders (as a factor variable) and weight. Give the P-value for the likelihood ratio test comparing the two models and suggest a model using 0.05 as a type I error rate significance benchmark.***
 
 Before we prepare out dataset converting the `cyl` (cylinders) variable to a factor, and creating the two candidates model `fit1` and `fit2` using the `lm` command:
 
