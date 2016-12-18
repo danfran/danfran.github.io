@@ -2,7 +2,8 @@
 layout: post
 title: "Shell Tips"
 date:   2016-11-19
-categories: shell sh bash awk grep tr sed cut
+categories: shell
+tags: sh bash awk grep tr sed cut
 ---
 ### Good readings for AWK
 
