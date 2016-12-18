@@ -1,9 +1,9 @@
 ### Site info:
-title: Super Quick Notes
-tagline:  Minimal jotted down notes. 
+title: Whatever
+tagline: "" 
 author: Daniele Francesconi
 email: dfrancesconi12@gmail.com
-description: "Minimal jotted down notes." # You can edit this line in _config.yml. It will appear in your document head meta and in your feed.xml site description
+description: "Some tips, notes, sample code about computer languages, framework, libraries, etc." # You can edit this line in _config.yml. It will appear in your document head meta and in your feed.xml site description
 keywords: "haskell, r, scala"
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://danfran.github.io" # the base hostname & protocol for your site
