@@ -47,7 +47,7 @@ locales:
 Blogroll:
       - name: Daniele Francesconi
         href: http://danfran.github.io
-        title: Super Quick Notes
+        title: Whatever
 
 ### Build settings
 markdown: kramdown
