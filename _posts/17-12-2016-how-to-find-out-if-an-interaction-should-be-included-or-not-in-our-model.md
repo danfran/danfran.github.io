@@ -1,7 +1,7 @@
 ---
 title: How to find out if an interaction should be included or not in our model
+categories: r
 tags: anova regression-model
-archives: r
 ---
 
 Based on this quiz question from the Coursera course for Data Science:
