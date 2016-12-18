@@ -11,8 +11,6 @@ permalink: /categories/
 {% endfor %}
 </ul>
 
-<hr/>
-
 <ul class="tags-box">
 {% for cat in site.categories %}
 <li id="{{ cat[0] }}">{{ cat[0] | capitalize }}</li>
