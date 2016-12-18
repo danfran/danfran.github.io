@@ -2,7 +2,7 @@
 layout: post
 title: "Chain of partial functions in Scala"
 date:   2016-11-26
-tags: scala partial-function
+tags: partial-function
 categories: scala
 ---
 
