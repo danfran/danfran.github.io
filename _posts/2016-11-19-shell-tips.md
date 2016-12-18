@@ -115,21 +115,3 @@ awk -F\, '$8 == "\"Some value\"" {
     }
   }' input_file.csv
 ```
-
-### Find the lines included in one file and not include in another one
-```sh
-$ cat a.csv
-aaa
-bbb
-ccc
-$ cat b.csv
-bbb
-aaa
-ddd
-eee
-$ grep -Fvf a.csv b.csv
-ddd
-eee
-$ grep -Fvf b.csv a.csv
-ccc
-```
