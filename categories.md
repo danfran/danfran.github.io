@@ -11,9 +11,11 @@ permalink: /categories/
 {% endfor %}
 </ul>
 
+<hr/>
+
 <ul class="tags-box">
 {% for cat in site.categories %}
-<li id="{{ cat[0] }}">{{ cat[0]}}</li>
+<li id="{{ cat[0] }}">{{ cat[0] | capitalize }}</li>
 {% for post in cat[1] %}
 <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time> &raquo;
 <a href="{{ site.baseurl }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a><br />
