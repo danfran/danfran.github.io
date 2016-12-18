@@ -98,21 +98,3 @@ sed "1002q;d" file.txt
 ```sh
 sudo sh -c 'head -1000000 filename.txt > filename.txt.part'
 ```
-
-### How to create different output files when process a CSV based on field conditions
-```sh
-awk -F\, '$8 == "\"Some value\"" {
-    gsub(/"| /, "", $6);
-
-    if ($4 ~ /foo/)
-    {
-      print > "output1.csv"
-    } else if ($4 ~ /bar/)
-    {
-      print > "output2.csv"
-    } else
-    {
-      print > "output3.csv"
-    }
-  }' input_file.csv
-```
