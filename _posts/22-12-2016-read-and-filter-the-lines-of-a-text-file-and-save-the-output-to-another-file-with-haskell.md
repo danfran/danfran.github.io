@@ -1,19 +1,16 @@
 ---
 layout: post
 title: "Read and Filter the Lines of a Text File and Save the Output to Another File with Haskell"
-date:   2016-22-02
+date: 2016-12-22
 categories: haskell
 tags: file filter
 ---
-
 Read the content of the file `input.txt`, split it in multiple lines `\n` via `lines`, apply a `filter` and save it back:
 
 ```haskell
 module Main where
 
 import Data.Char
-
-import Lib
 
 main :: IO ()
 main = do
