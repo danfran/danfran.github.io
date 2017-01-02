@@ -5,7 +5,7 @@ date: 2017-01-02
 categories: haskell
 tags: pattern-matching record-type
 ---
-Source: [http://stackoverflow.com/questions/9066026/about-pattern-matching-of-record-type]
+Source: <http://stackoverflow.com/questions/9066026/about-pattern-matching-of-record-type>
 
 ```haskell
 -- Sample record type
