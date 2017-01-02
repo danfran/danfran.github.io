@@ -1,22 +1,41 @@
 ---
 layout: post
-title: "Read and Filter the Lines of a Text File and Save the Output to Another File with Haskell"
-date: 2016-12-22
+title: "Pattern Matching of Record Type with Haskell"
+date: 2017-01-02
 categories: haskell
-tags: file filter
+tags: pattern-matching record-type
 ---
-Read the content of the file `input.txt`, split it in multiple lines `\n` via `lines`, apply a `filter` and save it back:
+Source: [http://stackoverflow.com/questions/9066026/about-pattern-matching-of-record-type]
 
 ```haskell
-module Main where
+-- Sample record type
+data Rec = Rec { uid :: Int, name :: String }
 
-import Data.Char
+-- Function to update Rec's fields
+updateRec :: Rec -> Rec
 
-main :: IO ()
-main = do
-    fileContent <- readFile "input.txt"
-    let validWords = unlines $ filter isValidWord $ lines fileContent
-    writeFile "output.txt" validWords
+-- basic matching with record data constructor
+updateRec (Rec _ []) = Rec 0 "Nobody"
 
-isValidWord w = length w > 5 && all isAlpha w
+-- dtto with as-pattern at 2nd param
+updateRec (Rec idn ns@"Alice") = Rec (idn+1) (ns ++ "+1")
+
+-- basic matching by fields values
+updateRec Rec {name = "Bob", uid = 42} = Rec (10^6) "SuperBob"
+
+-- Q: how to match by name field and assign it's value ?
+updateRec Rec {name = "Bob", uid = idn} =
+    Rec {uid = (idn+1), name = ("Bob" ++ "+1")}
+
+-- A: as-pattern
+updateRec Rec {name = uname@"Bob", uid = idn@42} = ...
+
+-- Q: as-pattern works only on the whole record, not on a field
+updateRec rec@(Rec {name = "Bob", uid = idn}) =
+    Rec {uid = (idn+1), name = (name rec ++ "+1")}
+
+-- Q: pattern guards do work, but they are a bit clumsy
+updateRec Rec {name = uname, uid = idn}
+    | uname == "Bob" = Rec {uid = (idn+1), name = (uname ++ "+1")}
+    | otherwise = ...
 ```
