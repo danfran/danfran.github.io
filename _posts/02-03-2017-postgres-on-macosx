@@ -10,5 +10,6 @@ Install the Mac App for Postgres here: <http://postgresapp.com/> (UNTIL STEP 3 I
 ```
 createuser daniele -d -r -s -P
 createdb myDbForFun -U daniele
+dropdb myDbForFun
 dropuser daniele
 ```
