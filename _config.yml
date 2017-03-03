@@ -59,4 +59,4 @@ gems: [jekyll-paginate]
 paginate: 5
 excerpt_separator: <!-- more -->
 
-theme: jekyll-theme-merlot
+theme: jekyll-theme-dinky
