@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "Postgres on Mac Os X“
+title: "Postgres on Mac Os X"
 date: 2017-03-02
-categories: postgres, macosx
+categories: postgres macosx
 tags: postgres-admin
 ---
 Install the Mac App for Postgres here: <http://postgresapp.com/> (UNTIL STEP 3 INCLUDED!!!)
