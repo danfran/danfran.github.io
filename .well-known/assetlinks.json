@@ -1,0 +1,9 @@
+[{
+  "relation": ["delegate_permission/common.handle_all_urls"],
+  "target": {
+    "namespace": "android_app",
+    "package_name": "com.taskool",
+    "sha256_cert_fingerprints":
+    ["38:F5:E5:E5:C5:23:5C:96:5B:FE:CA:94:EC:97:53:90:87:BF:48:27:AB:38:49:EB:69:64:07:F9:FC:7A:6F:A6"]
+  }
+}]
