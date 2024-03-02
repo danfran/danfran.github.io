@@ -8,6 +8,7 @@ keywords: "haskell, r, scala"
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://danfran.github.io" # the base hostname & protocol for your site
 locale: en_GB
+include: [".well-known"]
 
 ### Personal info and site tools info:
 github_username:  danfran
