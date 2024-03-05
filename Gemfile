@@ -6,6 +6,9 @@ require 'open-uri'
 
 # gem 'github-pages', versions['github-pages']
 
+gem 'jekyll-paginate'
+gem 'jekyll-theme-dinky'
+
 #source 'https://rubygems.org'
 #gem 'github-pages', '110', group: :jekyll_plugins
 #gem 'github-pages', group: :jekyll_plugins
