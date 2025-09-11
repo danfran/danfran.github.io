@@ -251,10 +251,13 @@
             }
             .app-image-container {
                 margin: 0 0 30px 0;
+                min-width: unset; /* Override min-width for mobile */
+                width: 100%; /* Ensure it takes full width */
             }
             .app-details {
                 padding: 10px;
                 text-align: center;
+                min-width: unset; /* Override min-width for mobile */
             }
             .app-details h3 {
                 flex-direction: column;
@@ -273,85 +276,85 @@
 </head>
 <body>
 
-    <header>
+<header>
+    <div class="container">
+        <div class="header-content">
+            <div class="profile-avatar">
+                <img src="https://avatars.githubusercontent.com/u/4922302?v=4" alt="Profile Picture">
+            </div>
+            <h1>My Portfolio Apps</h1>
+        </div>
+        <p>Apps that I built for fun</p>
+    </div>
+</header>
+
+<main>
+    <div class="portfolio-section">
         <div class="container">
-            <div class="header-content">
-                <div class="profile-avatar">
-                    <img src="https://avatars.githubusercontent.com/u/4922302?v=4" alt="Profile Picture">
-                </div> 
-                <h1>My Portfolio Apps</h1>
-            </div>
-            <p>Apps that I built for fun</p>
-        </div>
-    </header>
+            <h2>List of Published Apps</h2>
 
-    <main>
-        <div class="portfolio-section">
-            <div class="container">
-                <h2>List of Published Apps</h2>
-
-                <section class="app-card" id="app1">
-                    <div class="app-image-container">
-                        <img src="https://play-lh.googleusercontent.com/WILSkJSQc4Xrbx3M0GDim-hWDz_1Akv21el8DuFh6xgyYrIq6m8QRCpfQ83_2CDNXNUkIJidmYWsmoC_wEYI7Q=w526-h296-rw" alt="Qubit Quest Screenshot">
-                    </div>
-                    <div class="app-details">
-                        <h3>
-                            <div class="app-logo-thumbnail" style="background-image: url('https://play-lh.googleusercontent.com/AV7-8Plv5b6-zdA9vguKXf2lu6A0fLuf0MA45_TV7kbpF84cNloASJnP-IrYarAcg-F456U47WuzrMFgnzAeNw=w240-h480-rw');"></div>
-                            Qubit Quest: Your Quantum Adventure
-                        </h3>
-                        <p>Qubit Quest is an educational game designed to make quantum computing concepts accessible and fun. Solve complex puzzles and navigate quantum states to unlock the mysteries of the quantum world in a visually stunning environment.</p>
-                        <a href="https://play.google.com/store/apps/details?id=com.qubitquest" class="google-play-badge" target="_blank">
-                            <img alt="Get it on Google Play" src="https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png"/>
-                        </a>
-                    </div>
-                </section>
-
-                <section class="app-card" id="app2">
-                    <div class="app-image-container">
-                        <img src="https://play-lh.googleusercontent.com/2CPP4tD2wDBcoWmyFiK4R8F4NjtgoYw1Mt6LKqULNOtZn-Bjqfq2DitxnVt9CbIeOPgA=w526-h296-rw" alt="Idle Space Explorer Screenshot">
-                    </div>
-                    <div class="app-details">
-                        <h3>
-                            <div class="app-logo-thumbnail" style="background-image: url('https://play-lh.googleusercontent.com/Yz1KcNtsNIrEtvx1mel8ZXQd1VlcFAElQUn7ABUwPenZuQaF2sbMTXjS0wVtrG9Dcw=w240-h480-rw');"></div>
-                            Idle Space Explorer: A Galactic Expedition
-                        </h3>
-                        <p>Embark on an interstellar journey to amass a cosmic fortune! Idle to space riches! Mine valuable resources, upgrade your mining rigs, and conquer new planets in this addictive incremental simulator.</p>
-                        <a href="https://play.google.com/store/apps/details?id=com.idlespaceexplorer" class="google-play-badge" target="_blank">
-                            <img alt="Get it on Google Play" src="https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png"/>
-                        </a>
-                    </div>
-                </section>
-
-                <section class="app-card" id="app3">
-                    <div class="app-image-container">
-                        <img src="https://play-lh.googleusercontent.com/IoR8UP49GuduXO0M0wY3vSRUPFing5jpGNLxySOg4sP1ZiGUJp65muOQL5TAnGsjPM0=w526-h296-rw" alt="Taskool Screenshot">
-                    </div>
-                    <div class="app-details">
-                        <h3>
-                            <div class="app-logo-thumbnail" style="background-image: url('https://play-lh.googleusercontent.com/yHLbb8fQ1DdMInB1OUmR62DerC0IUzKj9M3QlayO-1sNY6_u_K5LYp2RhekgC3gouXU=w240-h480-rw');"></div>
-                            Taskool: The Task Manager
-                        </h3>
-                        <p>Boost your productivity for FREE with Taskool - the simple and secure task management app!</p>
-                        <a href="https://play.google.com/store/apps/details?id=com.taskool" class="google-play-badge" target="_blank">
-                            <img alt="Get it on Google Play" src="https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png"/>
-                        </a>
-                    </div>
-                </section>
-
-            </div>
-        </div>
-
-        <section class="contact-section">
-            <div class="container">
-                <h2>Contact</h2>
-                <div class="contact-info">
-                    <p>For questions, bugs, or just to say hi, feel free to reach out via email:</p>
-                    <a href="mailto:dfrancesconi12@gmail.com">dfrancesconi12@gmail.com</a>
+            <section class="app-card" id="app1">
+                <div class="app-image-container">
+                    <img src="https://play-lh.googleusercontent.com/WILSkJSQc4Xrbx3M0GDim-hWDz_1Akv21el8DuFh6xgyYrIq6m8QRCpfQ83_2CDNXNUkIJidmYWsmoC_wEYI7Q=w526-h296-rw" alt="Qubit Quest Screenshot">
                 </div>
-            </div>
-        </section>
+                <div class="app-details">
+                    <h3>
+                        <div class="app-logo-thumbnail" style="background-image: url('https://play-lh.googleusercontent.com/AV7-8Plv5b6-zdA9vguKXf2lu6A0fLuf0MA45_TV7kbpF84cNloASJnP-IrYarAcg-F456U47WuzrMFgnzAeNw=w240-h480-rw');"></div>
+                        Qubit Quest: Your Quantum Adventure
+                    </h3>
+                    <p>Qubit Quest is an educational game designed to make quantum computing concepts accessible and fun. Solve complex puzzles and navigate quantum states to unlock the mysteries of the quantum world in a visually stunning environment.</p>
+                    <a href="https://play.google.com/store/apps/details?id=com.qubitquest" class="google-play-badge" target="_blank">
+                        <img alt="Get it on Google Play" src="https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png"/>
+                    </a>
+                </div>
+            </section>
 
-    </main>
+            <section class="app-card" id="app2">
+                <div class="app-image-container">
+                    <img src="https://play-lh.googleusercontent.com/2CPP4tD2wDBcoWmyFiK4R8F4NjtgoYw1Mt6LKqULNOtZn-Bjqfq2DitxnVt9CbIeOPgA=w526-h296-rw" alt="Idle Space Explorer Screenshot">
+                </div>
+                <div class="app-details">
+                    <h3>
+                        <div class="app-logo-thumbnail" style="background-image: url('https://play-lh.googleusercontent.com/Yz1KcNtsNIrEtvx1mel8ZXQd1VlcFAElQUn7ABUwPenZuQaF2sbMTXjS0wVtrG9Dcw=w240-h480-rw');"></div>
+                        Idle Space Explorer: A Galactic Expedition
+                    </h3>
+                    <p>Embark on an interstellar journey to amass a cosmic fortune! Idle to space riches! Mine valuable resources, upgrade your mining rigs, and conquer new planets in this addictive incremental simulator.</p>
+                    <a href="https://play.google.com/store/apps/details?id=com.idlespaceexplorer" class="google-play-badge" target="_blank">
+                        <img alt="Get it on Google Play" src="https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png"/>
+                    </a>
+                </div>
+            </section>
+
+            <section class="app-card" id="app3">
+                <div class="app-image-container">
+                    <img src="https://play-lh.googleusercontent.com/IoR8UP49GuduXO0M0wY3vSRUPFing5jpGNLxySOg4sP1ZiGUJp65muOQL5TAnGsjPM0=w526-h296-rw" alt="Taskool Screenshot">
+                </div>
+                <div class="app-details">
+                    <h3>
+                        <div class="app-logo-thumbnail" style="background-image: url('https://play-lh.googleusercontent.com/yHLbb8fQ1DdMInB1OUmR62DerC0IUzKj9M3QlayO-1sNY6_u_K5LYp2RhekgC3gouXU=w240-h480-rw');"></div>
+                        Taskool: The Task Manager
+                    </h3>
+                    <p>Boost your productivity for FREE with Taskool - the simple and secure task management app!</p>
+                    <a href="https://play.google.com/store/apps/details?id=com.taskool" class="google-play-badge" target="_blank">
+                        <img alt="Get it on Google Play" src="https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png"/>
+                    </a>
+                </div>
+            </section>
+
+        </div>
+    </div>
+
+    <section class="contact-section">
+        <div class="container">
+            <h2>Contact</h2>
+            <div class="contact-info">
+                <p>For questions, bugs, or just to say hi, feel free to reach out via email:</p>
+                <a href="mailto:dfrancesconi12@gmail.com">dfrancesconi12@gmail.com</a>
+            </div>
+        </div>
+    </section>
+
+</main>
 
 </body>
 </html>
