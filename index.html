@@ -29,7 +29,6 @@
         header {
             text-align: center;
             padding: 80px 20px;
-            /* Updated header background for a tech-modern effect */
             background: linear-gradient(145deg, rgba(31, 26, 51, 0.95), rgba(42, 36, 74, 0.9));
             border-bottom: 3px solid #53a3e6;
             display: flex;
@@ -67,7 +66,7 @@
         header h1 {
             font-family: 'Montserrat', sans-serif;
             font-size: 3em;
-            color: #F0F0F0; /* Changed title color to white */
+            color: #F0F0F0;
             margin: 0;
             font-weight: 700;
         }
@@ -226,7 +225,7 @@
             color: #7abaff;
             text-decoration: underline;
         }
-        
+
         /* Responsive design */
         @media (max-width: 768px) {
             .header-content {
@@ -244,6 +243,7 @@
             }
             .app-card {
                 flex-direction: column;
+                align-items: center; /* This centers the content horizontally */
                 padding: 30px;
             }
             .app-card:nth-child(even) {
@@ -251,13 +251,13 @@
             }
             .app-image-container {
                 margin: 0 0 30px 0;
-                min-width: unset; /* Override min-width for mobile */
-                width: 100%; /* Ensure it takes full width */
+                min-width: unset;
+                width: 100%;
             }
             .app-details {
                 padding: 10px;
                 text-align: center;
-                min-width: unset; /* Override min-width for mobile */
+                min-width: unset;
             }
             .app-details h3 {
                 flex-direction: column;
