@@ -104,7 +104,6 @@
         .app-card {
             display: flex;
             flex-wrap: wrap;
-            align-items: center;
             justify-content: space-around;
             margin-bottom: 60px;
             padding: 50px;
@@ -119,15 +118,8 @@
             box-shadow: 0 15px 50px rgba(83, 163, 230, 0.2), 0 0 15px rgba(83, 163, 230, 0.4);
             border: 1px solid #53a3e6;
         }
-        .app-card:nth-child(odd) {
-            flex-direction: row;
-        }
-        .app-card:nth-child(even) {
-            flex-direction: row-reverse;
-        }
         .app-image-container {
             flex: 1;
-            min-width: 320px;
             text-align: center;
             padding: 20px;
         }
@@ -139,7 +131,6 @@
         }
         .app-details {
             flex: 2;
-            min-width: 350px;
             padding: 20px 40px;
             color: #f0f0f0;
         }
@@ -226,50 +217,63 @@
             text-decoration: underline;
         }
 
-        /* Responsive design */
-        @media (max-width: 768px) {
-            .header-content {
-                flex-direction: column;
-                text-align: center;
-            }
-            .profile-avatar {
-                margin: 0 auto 15px;
-            }
-            header h1 {
-                font-size: 2.2em;
-            }
-            .portfolio-section h2, .contact-section h2 {
-                font-size: 2em;
-            }
+        /* Mobile-first approach: These are the default styles for all screen sizes */
+        .app-card {
+            flex-direction: column;
+            align-items: center;
+            padding: 10px;
+        }
+        .app-image-container {
+            margin: 0 0 30px 0;
+        }
+        .app-details {
+            padding: 10px;
+            text-align: center;
+        }
+        .app-details h3 {
+            flex-direction: column;
+            text-align: center;
+            gap: 10px;
+        }
+        .app-logo-thumbnail {
+            margin: 0 auto;
+        }
+        .google-play-badge {
+            width: 150px;
+            margin: 20px auto 0;
+        }
+
+        /* Desktop media query: Styles applied to screens wider than 768px */
+        @media (min-width: 769px) {
             .app-card {
-                flex-direction: column;
-                align-items: center; /* This centers the content horizontally */
-                padding: 30px;
+                flex-direction: row; /* Set default to row for desktop */
+                padding: 50px;
             }
             .app-card:nth-child(even) {
-                flex-direction: column;
+                flex-direction: row-reverse;
             }
             .app-image-container {
-                margin: 0 0 30px 0;
-                min-width: unset;
-                width: 100%;
+                min-width: 320px;
+                margin: 0;
             }
             .app-details {
-                padding: 10px;
-                text-align: center;
-                min-width: unset;
+                min-width: 350px;
+                padding: 20px 40px;
+                text-align: left;
             }
             .app-details h3 {
-                flex-direction: column;
-                text-align: center;
-                gap: 10px;
+                flex-direction: row;
+                text-align: left;
             }
             .app-logo-thumbnail {
-                margin: 0 auto;
+                margin: 0;
             }
-            .google-play-badge {
-                width: 150px;
-                margin: 20px auto 0;
+        }
+
+        /* Mobile Container Fix */
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 10px;
             }
         }
     </style>
